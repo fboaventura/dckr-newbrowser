@@ -1,0 +1,26 @@
+{
+  "name": "newbrowser",
+  "version": "0.0.1",
+  "description": "Landing page to be used as a point to install all the needed extensions on a new browser.",
+  "keywords": "",
+  "license": "MIT",
+  "author": "Frederico Freire Boaventura",
+  "scripts": {
+    "change-cwd": "cd www",
+    "prebuild": "npm run change-cwd",
+    "build": "parcel build index.html",
+    "predev": "npm run change-cwd",
+    "dev": "parcel index.html --open",
+    "prestart": "npm run change-cwd",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "moment": "^2.29.4",
+    "popper.js": "^1.16.1"
+  }
+}

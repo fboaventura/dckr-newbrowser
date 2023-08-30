@@ -1,0 +1,51 @@
+{
+    "admin": {
+        "disabled": true
+    },
+    "logging": {
+        "sink": {
+            "writer": {
+                "output": "discard"
+            }
+        },
+        "logs": {
+            "access": {
+                "writer": { "output": "stdout" }
+                "encoder": {
+                    "format": "json",
+                    "message_key": "",
+                    "level_key": "",
+                    "time_key": "",
+                    "name_key": "",
+                    "caller_key": "",
+                    "stacktrace_key": "",
+                    "line_ending": "",
+                    "time_format": "",
+                    "duration_format": "",
+                    "level_format": ""
+                },
+                "level": "INFO"
+            },
+            "error": {
+                "writer": { "output": "stderr" }
+                "encoder": {
+                    "format": "json",
+                    "message_key": "",
+                    "level_key": "",
+                    "time_key": "",
+                    "name_key": "",
+                    "caller_key": "",
+                    "stacktrace_key": "",
+                    "line_ending": "",
+                    "time_format": "",
+                    "duration_format": "",
+                    "level_format": ""
+                },
+                "level": "INFO"
+            }
+        }
+    },
+    "apps": {
+
+    }
+}

@@ -1,0 +1,29 @@
+{
+    log access {
+        output stdout
+        format json
+        level  info
+    }
+    log error {
+        output stderr
+        format json
+        level  error
+    }
+
+    servers {
+        metrics
+        log_credentials
+    }
+}
+
+{$DOMAIN:localhost}:{$PORT:80} {
+    templates
+
+    root * {$BASEDIR}
+    file_server browse {
+        hide .git .env
+    }
+    encode zstd gzip
+
+    metrics /metrics
+}
