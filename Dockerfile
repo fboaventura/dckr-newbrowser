@@ -4,7 +4,7 @@
 
 # Use the official Caddy image
 # https://hub.docker.com/_/caddy
-FROM caddy:2.7-alpine
+FROM caddy:2.8-alpine
 
 # Upgrade packages
 RUN apk update && apk upgrade \
