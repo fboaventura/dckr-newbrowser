@@ -1,5 +1,4 @@
-version: "3.7"
-
+---
 services:
   web:
     container_name: newbrowser
@@ -7,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      DOMAIN: ""
     ports:
       - "8081:80"
     volumes:

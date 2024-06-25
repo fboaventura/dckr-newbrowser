@@ -12,6 +12,7 @@
     "predev": "npm run change-cwd",
     "dev": "parcel index.html --open",
     "prestart": "npm run change-cwd",
+    "start:build": "",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
