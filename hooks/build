@@ -11,7 +11,7 @@ export PLATFORMS="linux/arm64/v8,linux/amd64,linux/arm/v6,linux/arm/v7,linux/386
 #####################################
 # "=-=-=-=-= Settings =-=-=-=-="
 #####################################
-if [ "${SOURCE_BRANCH}" == "master" ]; then
+if [ "${SOURCE_BRANCH}" == "main" ]; then
   export IMG_VERSION="v${VERSION}"
   export LATEST="latest"
 else
