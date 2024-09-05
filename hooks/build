@@ -6,7 +6,7 @@
 export VERSION=$(xargs < VERSION)
 export BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 export VCS_REF=$(git rev-parse --short HEAD)
-export PLATFORMS="linux/arm64/v8,linux/amd64,linux/arm/v6,linux/arm/v7,linux/386,linux/ppc64le,linux/s390x,linux/riscv64"
+export PLATFORMS="linux/arm64/v8,linux/amd64,linux/arm/v6,linux/arm/v7,linux/ppc64le,linux/s390x,linux/riscv64"
 
 #####################################
 # "=-=-=-=-= Settings =-=-=-=-="
