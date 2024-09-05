@@ -11,4 +11,4 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - ./www:/app/www
+      - ./extensions.json:/app/www/assets/data/extensions.json
