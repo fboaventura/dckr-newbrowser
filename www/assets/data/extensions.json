@@ -1,0 +1,151 @@
+{
+  "extensions": [
+    {
+      "name": "Extensions Home",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/category/extensions",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/extensions/"
+      }
+    },
+    {
+      "name": "1Password",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/1password-%E2%80%93-password-mana/dppgmdbiimibapkepcbdbmkaabgiofem",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/1password-x-password-manager",
+        "safari": "https://apps.apple.com/br/app/1password-for-safari/id1569813296?mt=12"
+      }
+    },
+    {
+      "name": "Raindrop.io",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/raindropio/ldgfbffkinooeloadekpmfoklnobpien",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/raindropio/lpngnnjemnkjmgpoolldhiejhkmmgfge",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/raindropio/",
+        "safari": "https://apps.apple.com/br/app/save-to-raindrop-io/id1549370672?mt=12"
+      }
+    },
+    {
+      "name": "Grammarly",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/grammarly-grammar-checker/kbfnbcaeplbcioakkpcpgfkobkghlhen",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/grammarly-grammar-checke/cnlefmmeadmemmdciolhbnfeacpdfbkd",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/",
+        "safari": "https://apps.apple.com/br/app/grammarly-writing-app/id1462114288?mt=12"
+      }
+    },
+    {
+      "name": "JSON Formatter",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa"
+      }
+    },
+    {
+      "name": "Notion Web Clipper",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk"
+      }
+    },
+    {
+      "name": "Mailvelope",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/mailvelope/kajibbejlbohfaggdiogboambcijhkke"
+      }
+    },
+    {
+      "name": "ModHeader",
+      "urls": {
+        "chrome": "https://chromewebstore.google.com/detail/modheader-modify-http-hea/idgpnmonknjnojddfkpgkljpfnnfcklj"
+      }
+    },
+    {
+      "name": "AWS Extended Switch Role",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/aws-extend-switch-roles/jpmkfafbacpgapdghgdpembnojdlgkdl",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/aws-extend-switch-roles/dcflbohnocoeheondddeoknmgbngijbi",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/aws-extend-switch-roles3/"
+      }
+    },
+    {
+      "name": "UBlock Origin",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm"
+      }
+    },
+    {
+      "name": "Clutter Free",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/clutter-free-prevent-dupl/iipjdmnoigaobkamfhnojmglcdbnfaaf"
+      }
+    },
+    {
+      "name": "OneTab",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/onetab/hoimpamkkoehapgenciaoajfkfkpgfop",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/onetab/"
+      }
+    },
+    {
+      "name": "Cookie Remover",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce"
+      }
+    },
+    {
+      "name": "Enhancer for YouTube",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle"
+      }
+    },
+    {
+      "name": "PrintFriendly - Print and PDF Web Pages",
+      "urls": {
+        "chrome": "https://chromewebstore.google.com/detail/printfriendly-print-and-p/ohlencieiipommannpdfcmfdpjjmeolj"
+      }
+    },
+    {
+      "name": "Okta Browser Plugin",
+      "urls": {
+        "chrome": "https://chromewebstore.google.com/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb"
+      }
+    },
+    {
+      "name": "Wappalyzer",
+      "urls": {
+        "chrome": "https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg"
+      }
+    },
+    {
+      "name": "Extensions Home",
+      "urls": {
+        "edge": "https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home"
+      }
+    },
+    {
+      "name": "JSON Beautifier & Editor",
+      "urls": {
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/json-beautifier-editor/kpfjmbnldfjpgbglcdcmlkekajbcjlem"
+      }
+    },
+    {
+      "name": "JSON Beautifier & Editor",
+      "urls": {
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/json-beautifier-editor/"
+      }
+    },
+    {
+      "name": "Notion Web Clipper",
+      "urls": {
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/notion-web-clipper/",
+        "safari": "https://apps.apple.com/br/app/notion-web-clipper/id1559269364?mt=12"
+      }
+    },
+    {
+      "name": "Simply JSON for Safari",
+      "urls": {
+        "safari": "https://apps.apple.com/br/app/simplyjson-for-safari/id1495193038?mt=12"
+      }
+    }
+  ]
+}

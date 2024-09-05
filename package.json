@@ -6,18 +6,15 @@
   "license": "MIT",
   "author": "Frederico Freire Boaventura",
   "scripts": {
-    "change-cwd": "cd www",
-    "prebuild": "npm run change-cwd",
-    "build": "parcel build index.html",
-    "predev": "npm run change-cwd",
-    "dev": "parcel index.html --open",
-    "prestart": "npm run change-cwd",
-    "start:build": "",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:run": "parcel www/index.html",
+    "start": "concurrently npm:start:*"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "jquery": "^3.7.0",
