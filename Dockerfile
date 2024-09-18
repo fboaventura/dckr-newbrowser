@@ -7,7 +7,7 @@
 FROM caddy:2-alpine
 
 # Upgrade packages
-RUN apk update && apk upgrade -y \
+RUN apk update && apk upgrade -l  \
     && rm -rf /var/cache/apk/*
 
 ENV DOMAIN="localhost"
