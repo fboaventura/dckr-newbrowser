@@ -25,10 +25,9 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VENDOR
 ARG VERSION
-ARG AUTHOR
 
 LABEL \
-      org.opencontainers.image.authors="$AUTHOR" \
+      org.opencontainers.image.authors="Frederico Freire Boaventura" \
       org.opencontainers.image.created=$BUILD_DATE \
       org.opencontainers.image.description="Quick page to install frequently used extensions in browsers" \
       org.opencontainers.image.documentation="https://github.com/fboaventura/dckr-newbrowser/README.md" \
@@ -37,5 +36,5 @@ LABEL \
       org.opencontainers.image.source="https://github.com/fboaventura/dckr-newbrowser" \
       org.opencontainers.image.title="fboaventura/dckr-newbrowser" \
       org.opencontainers.image.url="https://fboaventura.dev" \
-      org.opencontainers.image.vendor="$AUTHOR" \
-      org.opencontainers.image.version="$VERSION"
+      org.opencontainers.image.vendor="Frederico Freire Boaventura" \
+      org.opencontainers.image.version="v$VERSION"
