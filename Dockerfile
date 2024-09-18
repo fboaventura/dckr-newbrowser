@@ -7,7 +7,7 @@
 FROM caddy:2-alpine
 
 # Upgrade packages
-RUN apk update && apk upgrade \
+RUN apk update && apk upgrade -y \
     && rm -rf /var/cache/apk/*
 
 ENV DOMAIN="localhost"
@@ -20,3 +20,22 @@ COPY docker_files/Caddyfile /app/conf/Caddyfile
 COPY www /app/www
 
 CMD ["/usr/bin/caddy", "run", "--config", "/app/conf/Caddyfile", "--adapter", "caddyfile"]
+
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VENDOR
+ARG VERSION
+ARG AUTHOR
+
+LABEL \
+      org.opencontainers.image.authors="$AUTHOR" \
+      org.opencontainers.image.created=$BUILD_DATE \
+      org.opencontainers.image.description="Quick page to install frequently used extensions in browsers" \
+      org.opencontainers.image.documentation="https://github.com/fboaventura/dckr-newbrowser/README.md" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.revision=$VCS_REF \
+      org.opencontainers.image.source="https://github.com/fboaventura/dckr-newbrowser" \
+      org.opencontainers.image.title="fboaventura/dckr-newbrowser" \
+      org.opencontainers.image.url="https://fboaventura.dev" \
+      org.opencontainers.image.vendor="$AUTHOR" \
+      org.opencontainers.image.version="$VERSION"

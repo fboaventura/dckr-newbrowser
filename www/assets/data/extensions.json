@@ -5,7 +5,8 @@
       "urls": {
         "chrome": "https://chrome.google.com/webstore/category/extensions",
         "firefox": "https://addons.mozilla.org/en-US/firefox/extensions/"
-      }
+      },
+      "tags": []
     },
     {
       "name": "1Password",
@@ -14,7 +15,8 @@
         "edge": "https://microsoftedge.microsoft.com/addons/detail/1password-%E2%80%93-password-mana/dppgmdbiimibapkepcbdbmkaabgiofem",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/1password-x-password-manager",
         "safari": "https://apps.apple.com/br/app/1password-for-safari/id1569813296?mt=12"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Raindrop.io",
@@ -23,6 +25,15 @@
         "edge": "https://microsoftedge.microsoft.com/addons/detail/raindropio/lpngnnjemnkjmgpoolldhiejhkmmgfge",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/raindropio/",
         "safari": "https://apps.apple.com/br/app/save-to-raindrop-io/id1549370672?mt=12"
+      },
+      "tags": []
+    },
+    {
+      "name": "React Developer Tools",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/"
       }
     },
     {
@@ -32,31 +43,29 @@
         "edge": "https://microsoftedge.microsoft.com/addons/detail/grammarly-grammar-checke/cnlefmmeadmemmdciolhbnfeacpdfbkd",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/",
         "safari": "https://apps.apple.com/br/app/grammarly-writing-app/id1462114288?mt=12"
-      }
+      },
+      "tags": []
     },
     {
       "name": "JSON Formatter",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa"
-      }
-    },
-    {
-      "name": "Notion Web Clipper",
-      "urls": {
-        "chrome": "https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Mailvelope",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/mailvelope/kajibbejlbohfaggdiogboambcijhkke"
-      }
+      },
+      "tags": []
     },
     {
       "name": "ModHeader",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/modheader-modify-http-hea/idgpnmonknjnojddfkpgkljpfnnfcklj"
-      }
+      },
+      "tags": []
     },
     {
       "name": "AWS Extended Switch Role",
@@ -64,19 +73,22 @@
         "chrome": "https://chrome.google.com/webstore/detail/aws-extend-switch-roles/jpmkfafbacpgapdghgdpembnojdlgkdl",
         "edge": "https://microsoftedge.microsoft.com/addons/detail/aws-extend-switch-roles/dcflbohnocoeheondddeoknmgbngijbi",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/aws-extend-switch-roles3/"
-      }
+      },
+      "tags": []
     },
     {
       "name": "UBlock Origin",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Clutter Free",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/clutter-free-prevent-dupl/iipjdmnoigaobkamfhnojmglcdbnfaaf"
-      }
+      },
+      "tags": []
     },
     {
       "name": "OneTab",
@@ -84,68 +96,75 @@
         "chrome": "https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall",
         "edge": "https://microsoftedge.microsoft.com/addons/detail/onetab/hoimpamkkoehapgenciaoajfkfkpgfop",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/onetab/"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Cookie Remover",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Enhancer for YouTube",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle"
-      }
+      },
+      "tags": []
     },
     {
       "name": "PrintFriendly - Print and PDF Web Pages",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/printfriendly-print-and-p/ohlencieiipommannpdfcmfdpjjmeolj"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Okta Browser Plugin",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Wappalyzer",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Extensions Home",
       "urls": {
         "edge": "https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home"
-      }
+      },
+      "tags": []
     },
     {
       "name": "JSON Beautifier & Editor",
       "urls": {
-        "edge": "https://microsoftedge.microsoft.com/addons/detail/json-beautifier-editor/kpfjmbnldfjpgbglcdcmlkekajbcjlem"
-      }
-    },
-    {
-      "name": "JSON Beautifier & Editor",
-      "urls": {
+        "chrome": "https://chromewebstore.google.com/detail/json-beautifier-editor/lpopeocbeepakdnipejhlpcmifheolpl",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/json-beautifier-editor/kpfjmbnldfjpgbglcdcmlkekajbcjlem",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/json-beautifier-editor/"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Notion Web Clipper",
       "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/notion-web-clipper/",
         "safari": "https://apps.apple.com/br/app/notion-web-clipper/id1559269364?mt=12"
-      }
+      },
+      "tags": []
     },
     {
       "name": "Simply JSON for Safari",
       "urls": {
         "safari": "https://apps.apple.com/br/app/simplyjson-for-safari/id1495193038?mt=12"
-      }
+      },
+      "tags": []
     }
   ]
 }
