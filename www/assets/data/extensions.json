@@ -29,6 +29,14 @@
       "tags": []
     },
     {
+      "name": "GoFullPage - Full Page Screen Capture",
+      "urls":{
+        "chrome": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/gofullpage-full-page-sc/hfaciehifhdcgoolaejkoncjciicbemc"
+      },
+      "tags": []
+    },
+    {
       "name": "React Developer Tools",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi",
