@@ -9,6 +9,14 @@
       "tags": []
     },
     {
+      "name": "OpenIn",
+      "urls": {
+        "chrome": "https://chromewebstore.google.com/detail/openin/iinbnkcidamhlklkapebjknpfdelahel",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/openin/"
+      },
+      "tags": []
+    },
+    {
       "name": "1Password",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa",
@@ -30,7 +38,7 @@
     },
     {
       "name": "GoFullPage - Full Page Screen Capture",
-      "urls":{
+      "urls": {
         "chrome": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
         "edge": "https://microsoftedge.microsoft.com/addons/detail/gofullpage-full-page-sc/hfaciehifhdcgoolaejkoncjciicbemc"
       },
