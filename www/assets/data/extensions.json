@@ -93,9 +93,9 @@
       "tags": []
     },
     {
-      "name": "UBlock Origin",
+      "name": "AdGuard AdBlocker",
       "urls": {
-        "chrome": "https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm"
+        "chrome": "https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg"
       },
       "tags": []
     },
