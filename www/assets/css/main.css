@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg:      #F8F6F2;
+  --surface: #FFFFFF;
+  --text:    #1C1917;
+  --muted:   #78716C;
+  --accent:  #C2410C;
+  --border:  #E7E4DF;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'IBM Plex Mono', 'Courier New', monospace;
+  --ease: 200ms ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 40vh;
+  min-height: 260px;
+  background-image: url('../img/hero-image-01.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 5, 2, 0.52) 0%,
+    rgba(10, 5, 2, 0.68) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: #FDFAF5;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: rgba(253, 250, 245, 0.5);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ── MAIN ─────────────────────────────────────────── */
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+  width: 100%;
+}
+
+/* ── FILTERS ──────────────────────────────────────── */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 2rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.filter-pill {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.7rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1.5;
+  transition: color var(--ease), border-color var(--ease), background var(--ease);
+  white-space: nowrap;
+}
+
+.filter-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-pill.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ── EXTENSION GRID ───────────────────────────────── */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.ext-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.65rem;
+}
+
+.ext-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  animation: slideIn 0.35s ease both;
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+}
+
+.ext-card.hidden {
+  display: none;
+}
+
+.ext-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 18px rgba(194, 65, 12, 0.1);
+  transform: translateY(-2px);
+}
+
+.ext-card-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem;
+  text-decoration: none;
+  color: var(--text);
+  height: 100%;
+  gap: 0.65rem;
+}
+
+.ext-name {
+  font-size: 0.79rem;
+  font-weight: 500;
+  line-height: 1.4;
+  flex: 1;
+  transition: color var(--ease);
+}
+
+.ext-card:hover .ext-name {
+  color: var(--accent);
+}
+
+.ext-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* ── BROWSER BADGES ───────────────────────────────── */
+.browser-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.browser-badge {
+  font-size: 0.52rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.38rem;
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+/* ── TAG PILLS ────────────────────────────────────── */
+.ext-tag-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.tag-pill {
+  font-size: 0.5rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.38rem;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  opacity: 0.65;
+}
+
+/* ── EMPTY STATE ──────────────────────────────────── */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 3.5rem 0;
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  text-align: center;
+  font-size: 0.67rem;
+  color: var(--muted);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2.2rem; }
+  main { padding: 2rem 1.25rem 3.5rem; }
+
+  .ext-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

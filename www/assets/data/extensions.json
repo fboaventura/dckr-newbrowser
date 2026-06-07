@@ -6,7 +6,7 @@
         "chrome": "https://chrome.google.com/webstore/category/extensions",
         "firefox": "https://addons.mozilla.org/en-US/firefox/extensions/"
       },
-      "tags": []
+      "tags": ["navigation"]
     },
     {
       "name": "OpenIn",
@@ -14,7 +14,7 @@
         "chrome": "https://chromewebstore.google.com/detail/openin/iinbnkcidamhlklkapebjknpfdelahel",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/openin/"
       },
-      "tags": []
+      "tags": ["utility"]
     },
     {
       "name": "1Password",
@@ -24,7 +24,7 @@
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/1password-x-password-manager",
         "safari": "https://apps.apple.com/br/app/1password-for-safari/id1569813296?mt=12"
       },
-      "tags": []
+      "tags": ["security", "passwords"]
     },
     {
       "name": "Raindrop.io",
@@ -34,7 +34,7 @@
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/raindropio/",
         "safari": "https://apps.apple.com/br/app/save-to-raindrop-io/id1549370672?mt=12"
       },
-      "tags": []
+      "tags": ["bookmarks", "productivity"]
     },
     {
       "name": "GoFullPage - Full Page Screen Capture",
@@ -42,7 +42,7 @@
         "chrome": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
         "edge": "https://microsoftedge.microsoft.com/addons/detail/gofullpage-full-page-sc/hfaciehifhdcgoolaejkoncjciicbemc"
       },
-      "tags": []
+      "tags": ["productivity", "screenshots"]
     },
     {
       "name": "React Developer Tools",
@@ -50,7 +50,8 @@
         "chrome": "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi",
         "edge": "https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/"
-      }
+      },
+      "tags": ["developer"]
     },
     {
       "name": "Grammarly",
@@ -60,28 +61,28 @@
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/",
         "safari": "https://apps.apple.com/br/app/grammarly-writing-app/id1462114288?mt=12"
       },
-      "tags": []
+      "tags": ["writing", "productivity"]
     },
     {
       "name": "JSON Formatter",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa"
       },
-      "tags": []
+      "tags": ["developer"]
     },
     {
       "name": "Mailvelope",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/mailvelope/kajibbejlbohfaggdiogboambcijhkke"
       },
-      "tags": []
+      "tags": ["security", "email"]
     },
     {
       "name": "ModHeader",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/modheader-modify-http-hea/idgpnmonknjnojddfkpgkljpfnnfcklj"
       },
-      "tags": []
+      "tags": ["developer"]
     },
     {
       "name": "AWS Extended Switch Role",
@@ -90,21 +91,28 @@
         "edge": "https://microsoftedge.microsoft.com/addons/detail/aws-extend-switch-roles/dcflbohnocoeheondddeoknmgbngijbi",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/aws-extend-switch-roles3/"
       },
-      "tags": []
+      "tags": ["developer", "aws"]
     },
     {
       "name": "AdGuard AdBlocker",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg"
       },
-      "tags": []
+      "tags": ["privacy", "security"]
     },
     {
       "name": "Clutter Free",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/clutter-free-prevent-dupl/iipjdmnoigaobkamfhnojmglcdbnfaaf"
       },
-      "tags": []
+      "tags": ["productivity"]
+    },
+    {
+      "name": "Claude AI",
+      "urls": {
+        "chrome": "https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn"
+      },
+      "tags": ["ai", "agent"]
     },
     {
       "name": "OneTab",
@@ -113,49 +121,49 @@
         "edge": "https://microsoftedge.microsoft.com/addons/detail/onetab/hoimpamkkoehapgenciaoajfkfkpgfop",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/onetab/"
       },
-      "tags": []
+      "tags": ["productivity"]
     },
     {
       "name": "Cookie Remover",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce"
       },
-      "tags": []
+      "tags": ["privacy", "security"]
     },
     {
       "name": "Enhancer for YouTube",
       "urls": {
         "chrome": "https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle"
       },
-      "tags": []
+      "tags": ["media", "productivity"]
     },
     {
       "name": "PrintFriendly - Print and PDF Web Pages",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/printfriendly-print-and-p/ohlencieiipommannpdfcmfdpjjmeolj"
       },
-      "tags": []
+      "tags": ["productivity"]
     },
     {
       "name": "Okta Browser Plugin",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/okta-browser-plugin/glnpjglilkicbckjpbgcfkogebgllemb"
       },
-      "tags": []
+      "tags": ["security", "authentication"]
     },
     {
       "name": "Wappalyzer",
       "urls": {
         "chrome": "https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg"
       },
-      "tags": []
+      "tags": ["developer", "research"]
     },
     {
       "name": "Extensions Home",
       "urls": {
         "edge": "https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home"
       },
-      "tags": []
+      "tags": ["navigation"]
     },
     {
       "name": "JSON Beautifier & Editor",
@@ -164,7 +172,7 @@
         "edge": "https://microsoftedge.microsoft.com/addons/detail/json-beautifier-editor/kpfjmbnldfjpgbglcdcmlkekajbcjlem",
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/json-beautifier-editor/"
       },
-      "tags": []
+      "tags": ["developer"]
     },
     {
       "name": "Notion Web Clipper",
@@ -173,14 +181,14 @@
         "firefox": "https://addons.mozilla.org/en-US/firefox/addon/notion-web-clipper/",
         "safari": "https://apps.apple.com/br/app/notion-web-clipper/id1559269364?mt=12"
       },
-      "tags": []
+      "tags": ["productivity", "notes"]
     },
     {
       "name": "Simply JSON for Safari",
       "urls": {
         "safari": "https://apps.apple.com/br/app/simplyjson-for-safari/id1495193038?mt=12"
       },
-      "tags": []
+      "tags": ["developer"]
     }
   ]
 }
