@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
 
 <head>
   <meta charset="utf-8"/>
-  <link href="./assets/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="./assets/img/apple-icon.png" rel="apple-touch-icon" sizes="180x180">
   <link href="./assets/img/favicon.png" rel="icon" type="image/png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"/>
   <title>Browser Extensions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
   <link rel="preload" href="./assets/img/hero-image-01.webp" as="image">
+  <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}());</script>
   <link href="./assets/css/main.css" rel="stylesheet"/>
 </head>
 
 <body>
 
 <header class="hero">
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">Light</button>
   <div class="hero-content">
     <h1>Browser Extensions</h1>
     <p>A curated list &mdash; install on any browser</p>
@@ -41,13 +44,43 @@
 
 <footer>
   <span>
-    &copy; <script>document.write(new Date().getFullYear())</script>
+    &copy; <span id="yr"></span>
     &nbsp;&middot;&nbsp;
     <a href="https://fboaventura.dev" target="_blank" rel="noopener">fboaventura.dev</a>
   </span>
 </footer>
 
-<script src="./assets/js/populateExtensions.js"></script>
+<script src="./assets/js/populateExtensions.js" defer></script>
+<script>
+  (function () {
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function effectiveTheme() {
+      var t = root.getAttribute('data-theme');
+      if (t === 'dark') return 'dark';
+      if (t === 'light') return 'light';
+      return mq.matches ? 'dark' : 'light';
+    }
+
+    function updateLabel() {
+      btn.textContent = effectiveTheme() === 'dark' ? 'Light' : 'Dark';
+    }
+
+    btn.addEventListener('click', function () {
+      var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateLabel();
+    });
+
+    mq.addEventListener('change', updateLabel);
+    updateLabel();
+  }());
+</script>
 
 </body>
 </html>

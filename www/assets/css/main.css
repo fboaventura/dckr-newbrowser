@@ -1,17 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
+/* ── DESIGN TOKENS — WINTER LIGHT (default) ──────── */
 :root {
-  --bg:      #F8F6F2;
-  --surface: #FFFFFF;
-  --text:    #1C1917;
-  --muted:   #78716C;
-  --accent:  #C2410C;
-  --border:  #E7E4DF;
+  /* Backgrounds */
+  --color-bg:            #F2F6FA;
+  --color-bg-subtle:     #E8EFF6;
+  --color-surface:       #FFFFFF;
+
+  /* Foreground */
+  --color-fg:            #1A2332;
+  --color-fg-muted:      #4A6080;
+  --color-fg-subtle:     #8DAAC4;
+
+  /* Accent — steel blue (AA-compliant: ~5.55:1 on snow) */
+  --color-accent:        #2563A8;
+  --color-accent-hover:  #1A4E8C;
+  --color-accent-fg:     #FFFFFF;
+  --color-accent-glow:   rgba(37, 99, 168, 0.12);
+
+  /* Structure */
+  --color-border:        #C8D8EA;
+  --color-border-subtle: #E0EAF4;
+  --color-shadow:        rgba(26, 35, 50, 0.08);
+
+  /* Hero — always over a dark photo overlay, unaffected by theme */
+  --color-hero-fg:             #EDF4FA;
+  --color-hero-overlay-start:  rgba(5, 10, 22, 0.52);
+  --color-hero-overlay-end:    rgba(5, 10, 22, 0.70);
+
+  /* Radii */
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-pill: 9999px;
+
+  /* Typography & motion — theme-invariant */
   --font-display: 'Fraunces', Georgia, serif;
   --font-body:    'IBM Plex Mono', 'Courier New', monospace;
-  --ease: 200ms ease;
+  --ease:         200ms ease;
 }
 
+/* ── WINTER DARK — system preference (no JS) ─────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg:            #0C1220;
+    --color-bg-subtle:     #111826;
+    --color-surface:       #182236;
+    --color-fg:            #E8EFF7;
+    --color-fg-muted:      #7A9EC0;
+    --color-fg-subtle:     #4A6880;
+    --color-accent:        #7EC8F0;
+    --color-accent-hover:  #A8DAEF;
+    --color-accent-fg:     #0C1220;
+    --color-accent-glow:   rgba(126, 200, 240, 0.15);
+    --color-border:        #1E3550;
+    --color-border-subtle: #182840;
+    --color-shadow:        rgba(0, 0, 0, 0.40);
+  }
+}
+
+/* ── WINTER DARK — explicit toggle ───────────────── */
+:root[data-theme="dark"] {
+  --color-bg:            #0C1220;
+  --color-bg-subtle:     #111826;
+  --color-surface:       #182236;
+  --color-fg:            #E8EFF7;
+  --color-fg-muted:      #7A9EC0;
+  --color-fg-subtle:     #4A6880;
+  --color-accent:        #7EC8F0;
+  --color-accent-hover:  #A8DAEF;
+  --color-accent-fg:     #0C1220;
+  --color-accent-glow:   rgba(126, 200, 240, 0.15);
+  --color-border:        #1E3550;
+  --color-border-subtle: #182840;
+  --color-shadow:        rgba(0, 0, 0, 0.40);
+}
+
+/* ── WINTER LIGHT — explicit override ────────────── */
+/* Restores light palette when system is dark but user toggled light */
+:root[data-theme="light"] {
+  --color-bg:            #F2F6FA;
+  --color-bg-subtle:     #E8EFF6;
+  --color-surface:       #FFFFFF;
+  --color-fg:            #1A2332;
+  --color-fg-muted:      #4A6080;
+  --color-fg-subtle:     #8DAAC4;
+  --color-accent:        #2563A8;
+  --color-accent-hover:  #1A4E8C;
+  --color-accent-fg:     #FFFFFF;
+  --color-accent-glow:   rgba(37, 99, 168, 0.12);
+  --color-border:        #C8D8EA;
+  --color-border-subtle: #E0EAF4;
+  --color-shadow:        rgba(26, 35, 50, 0.08);
+}
+
+/* ── RESET ────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -21,8 +101,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: var(--color-bg);
+  color: var(--color-fg);
   font-family: var(--font-body);
   font-size: 13.5px;
   line-height: 1.7;
@@ -30,6 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
+  transition: background var(--ease), color var(--ease);
 }
 
 /* ── HERO ─────────────────────────────────────────── */
@@ -53,8 +134,8 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 5, 2, 0.52) 0%,
-    rgba(10, 5, 2, 0.68) 100%
+    var(--color-hero-overlay-start) 0%,
+    var(--color-hero-overlay-end)   100%
   );
 }
 
@@ -69,7 +150,7 @@ body {
   font-size: clamp(2.8rem, 7vw, 5rem);
   font-weight: 300;
   font-style: italic;
-  color: #FDFAF5;
+  color: var(--color-hero-fg);
   letter-spacing: -0.025em;
   line-height: 1.1;
   margin-bottom: 0.8rem;
@@ -81,6 +162,31 @@ body {
   color: rgba(253, 250, 245, 0.5);
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+/* ── THEME TOGGLE ─────────────────────────────────── */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  z-index: 2;
+  background: rgba(253, 250, 245, 0.12);
+  border: 1px solid rgba(253, 250, 245, 0.25);
+  color: var(--color-hero-fg);
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background var(--ease), border-color var(--ease);
+}
+
+.theme-toggle:hover {
+  background: rgba(253, 250, 245, 0.22);
+  border-color: rgba(253, 250, 245, 0.45);
 }
 
 /* ── MAIN ─────────────────────────────────────────── */
@@ -112,10 +218,10 @@ main {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.28rem 0.7rem;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--muted);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-fg-muted);
   cursor: pointer;
   line-height: 1.5;
   transition: color var(--ease), border-color var(--ease), background var(--ease);
@@ -123,14 +229,14 @@ main {
 }
 
 .filter-pill:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .filter-pill.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-fg);
 }
 
 /* ── EXTENSION GRID ───────────────────────────────── */
@@ -146,9 +252,9 @@ main {
 }
 
 .ext-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   animation: slideIn 0.35s ease both;
   transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
 }
@@ -158,8 +264,8 @@ main {
 }
 
 .ext-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 18px rgba(194, 65, 12, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 18px var(--color-accent-glow);
   transform: translateY(-2px);
 }
 
@@ -168,7 +274,7 @@ main {
   flex-direction: column;
   padding: 0.9rem;
   text-decoration: none;
-  color: var(--text);
+  color: var(--color-fg);
   height: 100%;
   gap: 0.65rem;
 }
@@ -182,7 +288,7 @@ main {
 }
 
 .ext-card:hover .ext-name {
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 .ext-meta {
@@ -203,10 +309,10 @@ main {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.1rem 0.38rem;
-  border-radius: 10px;
-  background: var(--bg);
-  color: var(--muted);
-  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-fg-muted);
+  border: 1px solid var(--color-border);
   white-space: nowrap;
 }
 
@@ -222,10 +328,10 @@ main {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0.1rem 0.38rem;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--muted);
-  border: 1px solid var(--border);
+  color: var(--color-fg-muted);
+  border: 1px solid var(--color-border);
   white-space: nowrap;
   opacity: 0.65;
 }
@@ -234,7 +340,7 @@ main {
 .empty-state {
   grid-column: 1 / -1;
   text-align: center;
-  color: var(--muted);
+  color: var(--color-fg-muted);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   padding: 3.5rem 0;
@@ -242,23 +348,23 @@ main {
 
 /* ── FOOTER ───────────────────────────────────────── */
 footer {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--color-border);
   padding: 1.25rem 2rem;
   text-align: center;
   font-size: 0.67rem;
-  color: var(--muted);
+  color: var(--color-fg-muted);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
 footer a {
-  color: var(--muted);
+  color: var(--color-fg-muted);
   text-decoration: none;
   transition: color var(--ease);
 }
 
 footer a:hover {
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 /* ── RESPONSIVE ───────────────────────────────────── */
