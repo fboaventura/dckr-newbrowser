@@ -189,6 +189,15 @@
         "safari": "https://apps.apple.com/br/app/simplyjson-for-safari/id1495193038?mt=12"
       },
       "tags": ["developer"]
+    },
+    {
+      "name": "React Developer Tools",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil",
+        "firefox": "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/"
+      },
+      "tags": ["developer"]
     }
   ]
 }
