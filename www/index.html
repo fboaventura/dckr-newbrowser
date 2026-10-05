@@ -43,17 +43,30 @@
 </main>
 
 <footer>
-  <span>
+  <span class="footer-credit">
     &copy; <span id="yr"></span>
     &nbsp;&middot;&nbsp;
     <a href="https://fboaventura.dev" target="_blank" rel="noopener">fboaventura.dev</a>
   </span>
+  <span class="version-badge" id="app-version" aria-label="Application version">v&mdash;</span>
 </footer>
 
 <script src="./assets/js/populateExtensions.js" defer></script>
 <script>
   (function () {
     document.getElementById('yr').textContent = new Date().getFullYear();
+
+    fetch('./version.txt', { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Version unavailable');
+        return response.text();
+      })
+      .then(function (version) {
+        document.getElementById('app-version').textContent = version.trim();
+      })
+      .catch(function () {
+        document.getElementById('app-version').textContent = 'dev';
+      });
 
     var root = document.documentElement;
     var btn = document.getElementById('theme-toggle');

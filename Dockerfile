@@ -15,16 +15,22 @@ ENV BASEDIR="/app/www"
 ENV CONFDIR="/app/conf"
 ENV PORT="80"
 
-# Copy the Caddyfile and the site content into the container
-COPY docker_files/Caddyfile /app/conf/Caddyfile
-COPY www /app/www
-
-CMD ["/usr/bin/caddy", "run", "--config", "/app/conf/Caddyfile", "--adapter", "caddyfile"]
-
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VENDOR
 ARG VERSION
+
+# Copy the Caddyfile and the site content into the container
+COPY docker_files/Caddyfile /app/conf/Caddyfile
+COPY www /app/www
+COPY VERSION /app/VERSION
+
+# Expose the same version used by the image metadata to the web UI. Fall back
+# to the VERSION file so local Docker builds also display the correct release.
+RUN release="${VERSION:-$(xargs < /app/VERSION)}" \
+    && printf 'v%s\n' "$release" > /app/www/version.txt
+
+CMD ["/usr/bin/caddy", "run", "--config", "/app/conf/Caddyfile", "--adapter", "caddyfile"]
 
 LABEL \
       org.opencontainers.image.authors="Frederico Freire Boaventura" \
