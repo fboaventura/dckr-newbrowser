@@ -161,7 +161,7 @@ if (browserFilterRow) {
   });
 }
 
-fetch('assets/data/extensions.json')
+fetch('assets/data/extensions.json', { cache: 'no-cache' })
   .then(function(response) { return response.json(); })
   .then(function(data) {
     renderGrid(data.extensions);

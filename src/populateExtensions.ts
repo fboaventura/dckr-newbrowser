@@ -162,7 +162,7 @@ document.getElementById('browser-filter-row')?.addEventListener('click', (e) => 
   applyFilters();
 });
 
-fetch('assets/data/extensions.json')
+fetch('assets/data/extensions.json', { cache: 'no-cache' })
   .then((response) => response.json())
   .then((data: { extensions: Extension[] }) => {
     renderGrid(data.extensions);

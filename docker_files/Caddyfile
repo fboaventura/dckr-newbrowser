@@ -20,6 +20,12 @@
     templates
 
     root * {$BASEDIR}
+
+    # The extension catalog changes independently of the page assets. Always
+    # revalidate it so a previously cached response cannot hide an update.
+    @extension_catalog path /assets/data/extensions.json
+    header @extension_catalog Cache-Control "no-cache, must-revalidate"
+
     file_server browse {
         hide .git .env
     }
