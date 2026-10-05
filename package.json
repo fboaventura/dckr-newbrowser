@@ -2,7 +2,11 @@
   "name": "newbrowser",
   "version": "0.0.1",
   "description": "Landing page to be used as a point to install all the needed extensions on a new browser.",
-  "keywords": "",
+  "keywords": [
+    "landing page",
+    "extensions",
+    "browser"
+  ],
   "license": "MIT",
   "author": "Frederico Freire Boaventura",
   "scripts": {
@@ -11,8 +15,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "nodemon": "^3.1.4",
-    "parcel-bundler": "^1.12.4",
+    "parcel": "^2.16.4",
     "prettier": "^3.3.2",
     "typescript": "^5.5.4"
   },
