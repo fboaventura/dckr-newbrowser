@@ -184,6 +184,15 @@
       "tags": ["productivity", "notes"]
     },
     {
+      "name": "Violent Monkey",
+      "urls": {
+        "chrome": "https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag",
+        "firefox": "https://addons.mozilla.org/firefox/addon/violentmonkey/",
+        "edge": "https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao"
+      },
+      "tags": ["developer", "productivity"]
+    },
+    {
       "name": "Simply JSON for Safari",
       "urls": {
         "safari": "https://apps.apple.com/br/app/simplyjson-for-safari/id1495193038?mt=12"

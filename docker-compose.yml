@@ -2,13 +2,13 @@
 services:
   web:
     container_name: newbrowser
-    image: fboaventura/dckr-newbrowser:latest
+    image: ghcr.io/fboaventura/dckr-newbrowser:latest
     build:
       context: .
       dockerfile: Dockerfile
     environment:
       DOMAIN: ""
     ports:
-      - "8081:80"
-    volumes:
-      - ./extensions.json:/app/www/assets/data/extensions.json
+      - "8087:80"
+#    volumes:
+#      - ./data/extensions.json:/app/www/assets/data/extensions.json

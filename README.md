@@ -56,7 +56,7 @@ environment variable to set the domain name. This is useful when running the con
 To run the container, use the following command:
 
 ```bash
-docker run -d -p 8080:80 --name newbrowser -v /path/to/extensions.json:/app/www/assets/data/extensions.json dckr-newbrowser
+docker run -d -p 8080:80 --name newbrowser -v /path/to/extensions.json:/app/www/assets/data/extensions.json ghcr.io/fboaventura/dckr-newbrowser:latest
 ```
 
 Replace `/path/to/extensions.json` with the path to the JSON file you want to use.
@@ -70,7 +70,7 @@ To run the container using Docker Compose, use the following `docker-compose.yml
 services:
   web:
     container_name: newbrowser
-    image: fboaventura/dckr-newbrowser:latest
+    image: ghcr.io/fboaventura/dckr-newbrowser:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -83,6 +83,15 @@ services:
 ```
 
 Replace `./extensions.json` with the path to the JSON file you want to use.
+
+## Container publishing
+
+GitHub Actions builds the container for all supported platforms. Pushes to `main` publish
+`ghcr.io/fboaventura/dckr-newbrowser:latest` and the version from `VERSION` as a `v`-prefixed tag.
+Pushes to other branches publish the corresponding `dev` tags. Pull requests build the image without publishing it.
+
+The workflow authenticates to GitHub Container Registry with the repository's `GITHUB_TOKEN`; no registry secret is
+required. The package must be public for unauthenticated pulls.
 
 ## License
 
