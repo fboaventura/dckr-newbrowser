@@ -190,7 +190,14 @@
         "firefox": "https://addons.mozilla.org/firefox/addon/violentmonkey/",
         "edge": "https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao"
       },
-      "tags": ["developer", "productivity"]
+      "tags": ["developer", "userscripts"]
+    },
+    {
+      "name": "Userscripts",
+      "urls": {
+        "safari": "https://apps.apple.com/app/userscripts/id1463298887"
+      },
+      "tags": ["developer", "userscripts"]
     },
     {
       "name": "Simply JSON for Safari",
